@@ -15,8 +15,7 @@ require('yargs')
 				default: 'client'
 			})
 	}, (argv) => {
-		if (argv.verbose) console.info(`start server on :${argv.port}`)
-		console.log(install)
+		process.stdout.write("Starting...\n")
 		install(argv.dir, argv.name);
 	})
 	.option('verbose', {

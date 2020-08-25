@@ -12,8 +12,7 @@ const done = () => {
 
 const install = (dir, name) => {
 	console.log("Creating new application: ", name)
-	try {
-			
+	try {	
 			// Create app directory
 			process.stdout.write("Creating application directory... ")
 			const app_dir = utils.dir.create_dir_sync(dir, name)
@@ -29,7 +28,6 @@ const install = (dir, name) => {
 				process.stdout.write("Installing dependencies...\n")
 				install_deps(done)
 			})
-
 	}
 	catch (err) {
 		console.log('chdir: ' + err);
