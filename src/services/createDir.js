@@ -1,13 +1,13 @@
 const fs = require('fs');
 const path = require('path');
-const process = require('process');
 
-export default const create_dir = (dir, name) => {
+const create_dir_sync = (target) => {
 	try {
-		APP_DIR = path.join(dir, name);
-		fs.mkdirSync(APP_DIR, { recursive: true })
+		fs.mkdirSync(target, { recursive: true });
 	}
-	catch (err) {
-		throw err	
+	catch err {
+		
 	}
 }
+
+module.exports = create_dir_sync;
