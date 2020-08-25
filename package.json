@@ -1,0 +1,14 @@
+{
+  "name": "light-react-app",
+  "version": "1.0.0",
+  "description": "A utility that can create a barebones React Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^15.4.1"
+  }
+}
