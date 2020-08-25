@@ -31,7 +31,8 @@
     "http-server": "",
     "webpack": "",
     "webpack-cli": "",
-    "webpack-dev-server": ""
+    "webpack-dev-server": "",
+		"style-loader": ""
   }
 }
 
