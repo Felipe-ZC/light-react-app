@@ -4,14 +4,14 @@ A script to automate the creation of React + Webpack applications.
 
 ## TODO
 	
-	#### Current
+	Current
 	- Load all script dependencies before 
 		calling install.
 	- Refactor default installation logic 
 	  (defaultSteps)
 	- Fix casing issues (camel vs snake) 	
 
-	#### General 
+	General 
 	- Testing.
 	- Documentation.
 	- Use a logging library.
