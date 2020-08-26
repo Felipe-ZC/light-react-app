@@ -2,10 +2,6 @@
 
 A script to automate the creation of React + Webpack applications.
 
-```
-light-react-app new my-app my_app_dir/
-```
-
 ## TODO
 	- Testing.
 	- Documentation.
