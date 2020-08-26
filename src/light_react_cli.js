@@ -24,4 +24,3 @@ require('yargs')
 		description: 'Run with verbose logging'
 	})
 	.argv
-

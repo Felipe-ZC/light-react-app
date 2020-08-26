@@ -1,36 +1,29 @@
 const process = require('process');
-const utils = require('./utils')
+const utils = require('./utils');
 
-const install_deps = (cb) => {
-	const child = utils.package.install()
-	child.on('exit', cb)
-}
-
-const done = () => {
-	process.stdout.write("OK")
-}
-
-const install = (dir, name) => {
-	console.log("Creating new application: ", name)
+const install = async (dir, name) => {
 	try {	
-			// Create app directory
-			process.stdout.write("Creating application directory... ")
-			const app_dir = utils.dir.create_dir_sync(dir, name)
-			process.stdout.write("OK\n")
-			
-			// Enter app folder
-			process.chdir(app_dir)	
-			
-			// Create project files	
-			process.stdout.write("Creating project files...\n")
-			utils.dir.create_project_files((error) => {
-				if(error) throw error
-				process.stdout.write("Installing dependencies...\n")
-				install_deps(done)
-			})
+		// Create app directory
+		process.stdout.write("Creating application directory...")
+		const APP_DIR = await utils.dir.create_app_dir(dir, name);
+		
+		// Enter app folder
+		process.chdir(APP_DIR);	
+		
+		// Create project files 
+		process.stdout.write("Creating project files...");
+		await utils.dir.create_project_files();
+		process.stdout.write("OK\n");
+		
+		// Install dependencies
+		process.stdout.write("Installing dependencies...\n")
+		await utils.package.install();
+		process.stdout.write("OK\n")
+		
+		// Done
 	}
 	catch (err) {
-		console.log('chdir: ' + err);
+		console.log('Error: ' + err);
 	}
 }
 
