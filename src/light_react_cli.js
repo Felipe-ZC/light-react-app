@@ -18,9 +18,4 @@ require('yargs')
 		process.stdout.write("Starting...\n")
 		install(argv.dir, argv.name);
 	})
-	.option('verbose', {
-		alias: 'v',
-		type: 'boolean',
-		description: 'Run with verbose logging'
-	})
 	.argv
