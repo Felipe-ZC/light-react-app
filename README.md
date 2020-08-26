@@ -6,6 +6,13 @@ A script to automate the creation of React + Webpack applications.
 light-react-app new my-app my_app_dir/
 ```
 
+## TODO
+	- Testing.
+	- Documentation.
+	- Add support for custom package.json.
+	- Add support for custom project files.
+	- Tidy up package.json
+
 ## Setup
 
 Run the following commands to install
@@ -22,4 +29,14 @@ run it anywhere on your machine.
 
 ## Usage
 
-Run the script
+Run the script:
+```
+# 1
+npm start new [app_name] [dir_name]
+
+# 2
+node src/light_react_cli.js new [app_name] [dir_name]
+
+# 3 (if you installed the script globally...)
+light-react-app new [app_name] [dir_name]
+```

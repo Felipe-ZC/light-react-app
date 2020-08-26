@@ -32,7 +32,6 @@
     "babel-loader": "8.1.0",
     "css-loader": "4.2.2",
     "html-webpack-plugin": "4.3.0",
-    "http-server": "",
     "style-loader": "1.2.1",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12",

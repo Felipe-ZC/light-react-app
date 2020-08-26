@@ -34,7 +34,9 @@ let defaultSteps = [
     args: [],
     task: utils.dir.create_app_dir,
     useResultAsArgs: true,
-    transformResult: transform,
+    transformResult: function(res) {
+			return [res]
+		},
   },
   {
     msg: "Entering application directory...",
