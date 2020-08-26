@@ -15,7 +15,7 @@ const create_project_files = (cb) => {
 const create_app_dir = (dir, name, cb) => {
 	const target = path.join(dir, name)
 	return new Promise((resolve, reject) => {
-		fs.mkdir(target, { recursive: true }, (err) => {
+		fs.mkdir(target, (err) => {
 			if(err) reject(err)
 			resolve(target)
 		});	

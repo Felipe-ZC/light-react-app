@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "A utility that can create a barebones React+Webpack Application",
   "main": "index.js",
-	"bin": {
-		"light-react-app": "src/light_react_cli.js"
-	},
- 	"scripts": {
+  "bin": {
+    "light-react-app": "src/light_react_cli.js"
+  },
+  "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": "node src/light_react_cli.js"
+    "start": "node src/light_react_cli.js"
   },
   "author": "",
   "license": "ISC",
