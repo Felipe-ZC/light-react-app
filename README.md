@@ -5,9 +5,12 @@ A script to automate the creation of React + Webpack applications.
 ## TODO
 	
 	Current
-	- Load all script dependencies before calling install.
 	- Refactor default installation logic 
 	  (defaultSteps)
+	- Instead of calling process.chdir, pass the
+		new project directory to each task.
+	  (defaultSteps)
+	- Load all script dependencies before calling install.
 	- Fix casing issues (camel vs snake) 	
 
 	General 
