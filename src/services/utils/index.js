@@ -1,4 +1,5 @@
+'use strict';
 module.exports = {
-  dir: require("./dir.js"),
-  package: require("./package.js"),
+  dir: require('./dir.js'),
+  package: require('./package.js'),
 };

@@ -1,11 +1,12 @@
-const fs = require("fs");
-const path = require("path");
-const ncp = require("ncp");
-const TEMPLATE_FILES = path.resolve(__dirname, "../../config/install/");
+'use strict';
+const fs = require('fs');
+const path = require('path');
+const ncp = require('ncp');
+const TEMPLATE_FILES = path.resolve(__dirname, '../../config/install/');
 
 const create_project_files = (cb) => {
   return new Promise((resolve, reject) => {
-    ncp(TEMPLATE_FILES, ".", (err) => {
+    ncp(TEMPLATE_FILES, '.', (err) => {
       if (err) reject(err);
       resolve();
     });

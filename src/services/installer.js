@@ -1,8 +1,8 @@
-"use strict";
-const process = require("process");
-const utils = require("./utils");
+'use strict';
+const process = require('process');
+const utils = require('./utils');
 
-async function* installNewApp(steps) {
+async function *installNewApp(steps) {
   try {
     let args = null;
     for (let step of steps) {
@@ -30,32 +30,32 @@ const transform = (str) => {
 
 let defaultSteps = [
   {
-    msg: "Creating application directory...",
+    msg: 'Creating application directory...',
     args: [],
     task: utils.dir.create_app_dir,
     useResultAsArgs: true,
     transformResult: function(res) {
-			return [res]
-		},
+      return [res];
+    },
   },
   {
-    msg: "Entering application directory...",
+    msg: 'Entering application directory...',
     args: [],
     task: process.chdir,
   },
   {
-    msg: "Creating project files......",
+    msg: 'Creating project files......',
     args: [],
     task: utils.dir.create_project_files,
   },
   {
-    msg: "Installng dependencies...",
+    msg: 'Installng dependencies...',
     args: [],
     task: utils.package.install,
   },
 ];
 
-const install = async (dir, name, installSteps = []) => {
+const install = async(dir, name, installSteps = []) => {
   if (!installSteps.length) {
     installSteps = defaultSteps;
     installSteps[0].args = [dir, name];
@@ -64,7 +64,7 @@ const install = async (dir, name, installSteps = []) => {
     const asyncIter = installNewApp(installSteps);
     for await (const result of asyncIter) {
       if (result && result.error) throw result.error;
-      console.log("OK");
+      console.log('OK');
     }
   } catch (err) {
     console.log(err);
