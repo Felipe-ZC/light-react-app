@@ -26,13 +26,13 @@ async function* installNewApp(steps) {
 
 const transform = (str) => { return [str] }
 
-let steps = [
+let defaultSteps = [
 	{
 		"msg": "Creating application directory...", 
 		"args": [],
 		"task": utils.dir.create_app_dir,
 		"useResultAsArgs": true,
-		"transformResult": transform
+		"transformResult": transform 
 	},
 	{
 		"msg": "Entering application directory...", 
@@ -53,13 +53,13 @@ let steps = [
 
 const install = async (dir, name, installSteps=[]) => {
 	if(!installSteps.length) {
-		installSteps = steps;
+		installSteps = defaultSteps;
 		installSteps[0].args = [dir, name]
 	}
 	try {	
 		const asyncIter = installNewApp(installSteps);
 		for await (const result of asyncIter) {
-			//if(result.error) throw result.error
+			if(result && result.error) throw result.error
 			console.log("OK")
 		}
 	}
