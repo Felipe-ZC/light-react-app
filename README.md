@@ -34,14 +34,16 @@ run it anywhere on your machine.
 
 ## Usage
 
-Run the script:
+Run the script using any of the methods
+shown below:
+
 ```
-# 1
-npm start new [app_name] [dir_name]
-
-# 2
-node src/light_react_cli.js new [app_name] [dir_name]
-
-# 3 (if you installed the script globally...)
+# 1 (if you installed the script globally...)
 light-react-app new [app_name] [dir_name]
+
+# 2 
+npm run start new [app_name] [dir_name]
+
+# 3 
+node src/light_react_cli.js new [app_name] [dir_name]
 ```
