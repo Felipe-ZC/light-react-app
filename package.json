@@ -7,7 +7,7 @@
     "light-react-app": "src/light_react_cli.js"
   },
   "scripts": {
-		"pretest": "eslint --ignore-pattern /src/config/install/* --ignore-path .gitignore .",
+    "pretest": "eslint --ignore-pattern /src/config/install/* --ignore-path .gitignore .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node src/light_react_cli.js"
   },
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "eslint": "7.7.0",
-    "eslint-config-strongloop": "2.1.0"
+    "eslint-config-strongloop": "2.1.0",
+    "prettier": "2.1.1"
   }
 }
