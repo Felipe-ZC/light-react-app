@@ -4,24 +4,20 @@ const path = require('path');
 const getDefaultSteps = require('./default_install.js');
 
 async function *installNewApp(steps) {
-  try {
-    let args = null;
-    for (let step of steps) {
-      const { msg, task } = step;
-      args = args || step.args;
+  let args = null;
+  for (let step of steps) {
+    const { msg, task } = step;
+    args = args || step.args;
 
-      console.log(msg);
-      const result = await task(...args);
-      yield result;
+    console.log(msg);
+    const result = await task(...args);
+    yield result;
 
-      args = step.useResultAsArgs
-        ? step.transformResult
-          ? step.transformResult(result)
-          : result
-        : null;
-    }
-  } catch (err) {
-    throw err;
+    args = step.useResultAsArgs
+      ? step.transformResult
+        ? step.transformResult(result)
+        : result
+      : null;
   }
 }
 

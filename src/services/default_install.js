@@ -6,12 +6,12 @@ const getDefaultSteps = (appDir) => {
     {
       msg: 'Creating application directory...',
       args: [appDir],
-      task: utils.dir.create_app_dir,
+      task: utils.dir.createAppDir,
     },
     {
       msg: 'Creating project files...',
       args: [appDir],
-      task: utils.dir.create_project_files,
+      task: utils.dir.createProjectFiles,
     },
     {
       msg: 'Installng dependencies...',
@@ -21,10 +21,6 @@ const getDefaultSteps = (appDir) => {
   ];
 };
 
-// `npm install react react-dom --save &&
-// npm install --save-dev @babel/core @babel/preset-env
-// @babel/preset-react webpack webpack-cli webpack-dev-server
-// babel-loader css-loader style-loader html-webpack-plugin')`
 const getDefaultInstallScript = (appDir) => {
   return `cd ${appDir} && npm i`;
 };
