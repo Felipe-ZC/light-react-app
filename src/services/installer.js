@@ -1,7 +1,7 @@
 'use strict';
 const process = require('process');
 const path = require('path');
-const getDefaultSteps = require('./default_install.js') 
+const getDefaultSteps = require('./default_install.js');
 
 async function *installNewApp(steps) {
   try {
@@ -33,20 +33,18 @@ async function *installNewApp(steps) {
  * */
 const install = async(args, preinstall, installSteps) => {
   try {
-		const APP_DIR = path.join(args.dir, args.name)
-		
-		// No custom installSteps, use default installation...
-		if (!installSteps) 
-			installSteps = getDefaultSteps(APP_DIR);
-		
-		// Start installing new app...
+    const APP_DIR = path.join(args.dir, args.name);
+
+    // No custom installSteps, use default installation...
+    if (!installSteps) installSteps = getDefaultSteps(APP_DIR);
+
+    // Start installing new app...
     const asyncIter = installNewApp(installSteps);
     for await (const result of asyncIter) {
       if (result && result.error) throw result.error;
       console.log('OK');
     }
-	}
-  catch (err) {
+  } catch (err) {
     console.log(err);
     process.exit(1);
   }

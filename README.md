@@ -3,23 +3,23 @@
 A script to automate the creation of React + Webpack applications.
 
 ## TODO
-	
-	Current
-	- Refactor default installation logic 
-	  (defaultSteps)
-	- Instead of calling process.chdir, pass the
-		new project directory to each task.
-	  (defaultSteps)
-	- Load all script dependencies before calling install.
-	- Fix casing issues (camel vs snake) 	
 
-	General 
-	- Testing.
-	- Documentation.
-	- Use a logging library.
-	- Add support for custom package.json.
-	- Add support for custom project files.
-	- Tidy up package.json
+    Current
+    - Refactor default installation logic
+      (defaultSteps)
+    - Instead of calling process.chdir, pass the
+    	new project directory to each task.
+      (defaultSteps)
+    - Load all script dependencies before calling install.
+    - Fix casing issues (camel vs snake)
+
+    General
+    - Testing.
+    - Documentation.
+    - Use a logging library.
+    - Add support for custom package.json.
+    - Add support for custom project files.
+    - Tidy up package.json
 
 ## Setup
 
@@ -44,9 +44,9 @@ shown below:
 # 1 (if you installed the script globally...)
 light-react-app new [app_name] [dir_name]
 
-# 2 
+# 2
 npm run start new [app_name] [dir_name]
 
-# 3 
+# 3
 node src/light_react_cli.js new [app_name] [dir_name]
 ```

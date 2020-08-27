@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 'use strict';
-
 const process = require('process');
 const install = require('./services/installer.js');
 

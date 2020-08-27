@@ -1,13 +1,13 @@
 {
   "extends": "strongloop",
   "parserOptions": {
-    "ecmaVersion": 11 
+    "ecmaVersion": 11
   },
-	"env": {
-		"node": true,
-		"es6": true
-	},
-	"rules": {
-		"generator-star-spacing": [2, {"before": true, "after": false}]
-	}
+  "env": {
+    "node": true,
+    "es6": true
+  },
+  "rules": {
+    "generator-star-spacing": [2, { "before": true, "after": false }]
+  }
 }

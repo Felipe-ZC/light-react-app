@@ -4,7 +4,7 @@ const path = require('path');
 const ncp = require('ncp');
 const TEMPLATE_FILES = path.resolve(__dirname, '../../config/install/');
 
-const create_project_files = (appDir, projectFiles="") => {
+const create_project_files = (appDir, projectFiles = '') => {
   return new Promise((resolve, reject) => {
     ncp(projectFiles || TEMPLATE_FILES, appDir, (err) => {
       if (err) reject(err);
