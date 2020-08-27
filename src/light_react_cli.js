@@ -19,6 +19,6 @@ require('yargs').command(
   },
   (argv) => {
     process.stdout.write('Starting...\n');
-    install(argv.dir, argv.name);
+    install(argv);
   },
 ).argv;

@@ -4,21 +4,20 @@ const path = require('path');
 const ncp = require('ncp');
 const TEMPLATE_FILES = path.resolve(__dirname, '../../config/install/');
 
-const create_project_files = (cb) => {
+const create_project_files = (appDir, projectFiles="") => {
   return new Promise((resolve, reject) => {
-    ncp(TEMPLATE_FILES, '.', (err) => {
+    ncp(projectFiles || TEMPLATE_FILES, appDir, (err) => {
       if (err) reject(err);
       resolve();
     });
   });
 };
 
-const create_app_dir = (dir, name, cb) => {
-  const target = path.join(dir, name);
+const create_app_dir = (targetDir) => {
   return new Promise((resolve, reject) => {
-    fs.mkdir(target, (err) => {
+    fs.mkdir(targetDir, (err) => {
       if (err) reject(err);
-      resolve(target);
+      resolve();
     });
   });
 };
